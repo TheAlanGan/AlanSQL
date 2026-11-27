@@ -1,0 +1,6 @@
+flask>=3.0
+waitress>=3.0
+PyMySQL[rsa]>=1.1
+keyring>=25
+paramiko>=3.4
+pyodbc>=5.1

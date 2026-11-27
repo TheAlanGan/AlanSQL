@@ -1,0 +1,21 @@
+# Python environment and caches (recreated by setup.bat)
+.venv/
+__pycache__/
+*.pyc
+
+# Build output (recreated by make_dist.bat)
+dist/
+build/
+
+# Logs
+*.log
+
+# Editor / OS clutter
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Test runs
+.pytest_cache/

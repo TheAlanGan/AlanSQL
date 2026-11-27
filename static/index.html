@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DBCentral</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/static/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" data-name="vs/editor/editor.main" href="/static/vendor/monaco-vs/editor/editor.main.css">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<div id="app"><div class="boot">Loading DBCentral…</div></div>
+<div id="overlay-root"></div>
+<!-- sql-formatter must load before the AMD loader so it registers as a global -->
+<script src="/static/vendor/sql-formatter.min.js"></script>
+<script src="/static/vendor/monaco-vs/loader.js"></script>
+<script>
+  require.config({ paths: { vs: '/static/vendor/monaco-vs' } });
+  window.monacoReady = new Promise(function (resolve) {
+    require(['vs/editor/editor.main'], function () { resolve(window.monaco); });
+  });
+</script>
+<script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
